@@ -42,19 +42,21 @@ OneWire beerProbeWire(TEMPROBE);
 DallasTemperature beerProbe(&beerProbeWire);
 DHT environmentSensor(ENVSENS, DHTTYPE);  // Declarar sensor ambiente
 float envTemp;
-float prevEnvTemp;
 float beerTemp;
-float prevBeerTemp;
 int selectTemp;
-int prevSelectTemp;
 int selectTolerance;
-int prevSelectTolerance;
 int tempSelectorValue;
 int tolerSelectorValue;
 byte heating;
 byte cooling;
+
+//Valores en la anterior vuelta del loop
+float prevBeerTemp;
+float prevEnvTemp;
 byte prevCooling;
 byte prevHeating;
+int prevSelectTemp;
+int prevSelectTolerance;
 
 
 //Functions
