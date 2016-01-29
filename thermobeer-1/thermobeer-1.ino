@@ -172,9 +172,9 @@ void loop() {
     //Mostrar tolerancia seleccionada
     printText(String(selectTolerance) +(char)223 + "C", 1, 6); 
     //Mostrar temperatura ambiente
-    printText(String(envTemp) +(char)223 + "C",0, 0);
+    printText(String(envTemp) +(char)223 + "C",0, 9);
     //Mostrar sonda
-    printText(String(beerTemp) +(char)223 + "C",0, 9);
+    printText(String(beerTemp) +(char)223 + "C",0, 0);
 
 
     //Indicar si estamos enfriando o calentando, para saber que relé está conectado.
