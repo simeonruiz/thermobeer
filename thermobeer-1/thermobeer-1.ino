@@ -100,16 +100,13 @@ void loop() {
 
   //puesto que los valores de los potenciometros se corresponderan a un nivel de resolucion de la entrada analogica
   //los mapeamos al rango que deseamos (entre 8 y 26 para la seleccion de temperatura y 0 y 2 para el margen)
-  selectTemp = map(tempSelectorValue, 0, 1023, 8, 26);
+  selectTemp = map(tempSelectorValue, 0, 1023, 0, 24);
   selectTolerance = map (tolerSelectorValue, 0, 1023, 0, 2);
 
   //Obtenemos las temperaturas.
   envTemp = environmentSensor.readTemperature();
   beerProbe.requestTemperatures();
   beerTemp = beerProbe.getTempCByIndex(0);
-
-  //MOSTRAR TODAS LAS TEMPERATURAS
-
 
   
   if(beerTemp >= selectTemp + selectTolerance){
